@@ -77,11 +77,11 @@ object EC2InstanceManager {
   def instanceIdsByName(name: String)(implicit logger: String => Unit = println): List[String] = instanceByName(name).map(_.getInstanceId).toList
  
   def statusCheck(instanceIds: List[String]): Seq[InstanceStatusSummary] =
-   for (instStatus <- describeInstanceStatus(instanceIds).getInstanceStatuses.asScala)
+   for (instStatus <- describeInstanceStatus(instanceIds).getInstanceStatuses.asScala.toSeq)
      yield instStatus.getInstanceStatus
 
   def instanceState(instanceIds: List[String]): Seq[InstanceState] =
-    for (instStatus <- describeInstanceStatus(instanceIds).getInstanceStatuses.asScala)
+    for (instStatus <- describeInstanceStatus(instanceIds).getInstanceStatuses.asScala.toSeq)
     yield instStatus.getInstanceState
 
 

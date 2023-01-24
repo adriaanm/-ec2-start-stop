@@ -6,18 +6,18 @@
   <parent>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>plugin</artifactId>
-      <version>2.37</version>
+      <version>4.54</version>
       <relativePath />
   </parent>
   <properties>
-      <jenkins.version>2.105</jenkins.version>
-      <java.level>8</java.level>
+      <jenkins.version>2.387</jenkins.version>
+      <!-- <java.level>11</java.level> -->
       <maven.javadoc.skip>true</maven.javadoc.skip>
   </properties>
 
   <groupId>com.typesafe.jenkins</groupId>
   <artifactId>ec2-start-stop</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.2</version>
   <packaging>hpi</packaging>
 
   <name>EC2 Start/Stop Plugin</name>
@@ -53,7 +53,7 @@
       <plugin>
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>4.8.0</version>
         <configuration>
           <recompileMode>incremental</recompileMode>
           <args>
@@ -74,7 +74,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.2</version>
+        <version>3.10.1</version>
         <configuration>
         </configuration>
       </plugin>
@@ -98,12 +98,12 @@
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
-      <version>2.11.4</version>
+      <version>2.13.10</version>
     </dependency>
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk</artifactId>
-      <version>1.9.13</version>
+      <version>1.12.389</version>
       <exclusions>
         <exclusion>
           <groupId>commons-codec</groupId>
@@ -114,7 +114,7 @@
     <dependency>
     	<groupId>org.apache.httpcomponents</groupId>
     	<artifactId>httpclient</artifactId>
-	<version>4.3.6</version>
+	<version>4.5.14</version>
       <exclusions>
         <exclusion>
           <groupId>commons-codec</groupId>
@@ -125,7 +125,7 @@
     <dependency>
     	<groupId>org.apache.httpcomponents</groupId>
     	<artifactId>httpcore</artifactId>
-	<version>4.3.2</version>
+	<version>4.4.16</version>
     </dependency>
   </dependencies>
 
