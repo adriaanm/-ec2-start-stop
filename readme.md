@@ -29,7 +29,7 @@ To build the plugin
       </settings>
       ```
   - Build the plugin by running `mvn install -Dspotbugs.skip=true`
-  - Upload the `target/ec2-start-stop.hpi` file to a [GitHub release](https://github.com/lightbend/ec2-start-stop/releases)
+  - Upload the `target/ec2-start-stop.hpi` file to a [GitHub release](https://github.com/lightbend-labs/ec2-start-stop/releases)
   - Copy the `hpi` file URL and use it in https://scala-ci.typesafe.com/manage/pluginManager/advanced to install ("deploy") the new version, restart Jenkins
 
 ## 🤨
